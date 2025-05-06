@@ -7,6 +7,9 @@ class OneKeyGame:
         #初期化
         pyxel.init(160, 120, title=GAME_TITLE)
 
+        #リソースファイルの読み込み
+        pyxel.load("pyxel_game.pyxres")
+
         #ゲームのリセット
         self.is_title = True
         self.reset_game()
@@ -22,8 +25,30 @@ class OneKeyGame:
     def update(self):
         pass
 
+    def draw_test(self):
+        pyxel.blt(
+            80,
+            80,
+            0,
+            0,
+            0,
+            16,
+            16,
+            0
+        )
+        pyxel.blt(
+            80,
+            80,
+            0,
+            16,
+            0,
+            48,
+            48,
+            0
+        )
+
     #アプリの描画
     def draw(self):
-        pass
+        self.draw_test()
 
 OneKeyGame()
